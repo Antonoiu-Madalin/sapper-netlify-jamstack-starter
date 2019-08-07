@@ -12,13 +12,12 @@
 
   .grid {
     height: auto; /*or 100vh if you want full screen */
-    max-width: 900px;
+    max-width: 800px;
     display: grid;
-    grid-template-columns: 100px auto;
-    grid-gap: 10px;
+    grid-template-columns: 65px auto;
     align-items: top;
     justify-content: top;
-    padding: 20px;
+    padding: 5px;
     font: 14px/1.5 "Open Sans", sans-serif;
   }
 
@@ -28,11 +27,16 @@
 
   .box-a,
   .box-b {
-    padding: 40px;
+    padding: 10px;
     border: 1px solid rgba(0, 0, 0, 0.2);
     color: #fff;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
   }
+
+  .box-a {
+    max-width: 60px;
+  }
+  
   .box-a-rotate {
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
@@ -137,6 +141,23 @@
     label {
       font-size: 0;
     }
+
+    label[for*="0"] {
+      color: red;
+      font-size: 20px;
+    }
+    label[for*="0"]:before {
+      font-family: "Font Awesome 5 Brands";
+      content: "\f3b9";
+      font-size: 30px;
+      color: #f0db4f;
+      padding: 5px;
+    }
+
+    .box-a {
+      padding: 0;
+    }
+
     label:before {
       margin: 0;
       font-size: 18px;
@@ -145,7 +166,9 @@
 
   @media screen and (max-width: 500px) {
     label {
-      padding: 15px;
+      padding: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
     }
   }
 </style>
@@ -153,6 +176,7 @@
 <svelte:head>
   <title>Portfolio</title>
 </svelte:head>
+
 <main class="grid">
   <div class="box-a" style="font-size: 30px;">
     <div class="box-a-rotate">
@@ -178,7 +202,7 @@
 
     <section id="content1">
 
-      <ul style="padding-left: 17px">
+      <ul style="padding-left: 30px">
         <li>Gatsby.js</li>
         <li>Next.js</li>
       </ul>

@@ -13,7 +13,7 @@
 <style>
   /* Portfolio important settings */
   .portfolio-block {
-    padding-top: 100px;
+    margin-top: 100px;
     text-align: center;
     padding-left: 15px;
     padding-right: 15px;
@@ -21,7 +21,7 @@
   /* Must be placed right after. Clears text on lower screens */
   @media (max-width: 576px) {
     .portfolio-block {
-      padding-top: 50px;
+      margin-top: 40px;
     }
     .portfolio-block.block-intro .about-me {
       width: 320px;

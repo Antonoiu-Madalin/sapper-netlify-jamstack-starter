@@ -3,10 +3,17 @@ body {
 	font-family: Tahoma, Geneva, sans-serif;
 	padding-bottom: 0px;
 	margin: 0px;
-	height: 100vh;
+
 }
 
-strong{font-weight:bold;}
+html {
+	height: 100vh;
+	background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+}
+
+strong {
+	font-weight: bold;
+}
 
 h1,
 h2,
