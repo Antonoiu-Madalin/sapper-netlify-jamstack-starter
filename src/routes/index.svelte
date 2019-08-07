@@ -9,7 +9,7 @@
       .then(json => console.log(json));
   });
 </script>
- 
+
 <style>
   section {
   }
@@ -216,12 +216,11 @@
   <section class="portfolio-block block-intro">
     <div class="container">
 
-     <div class="avatar" style="background-image: url(avatar.jpg)"></div>
+      <div class="avatar" style="background-image: url(avatar.jpg)" />
 
       <div class="about-me">
         <p style="color: rgb(160,175,190);">
-          Hello! I am&nbsp;    
-
+          Hello! I am&nbsp;
           <strong>Madalin Antonoiu</strong>
           . I work as a full stack web developer. I have a passion for creating
           blazing fast, pixel perfect, responsive &nbsp;websites.
@@ -230,10 +229,9 @@
         <div class="grid__item theme-6">
           <div class="anchorControl">
 
-          <a  href='about'>
-          <button class="glow-on-hover" type="button">Portfolio</button>
-          </a>
-             
+            <a href="portfolio">
+              <button class="glow-on-hover" type="button">Portfolio</button>
+            </a>
 
           </div>
         </div>
