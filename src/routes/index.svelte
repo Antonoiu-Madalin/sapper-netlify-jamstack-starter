@@ -11,8 +11,6 @@
 </script>
 
 <style>
-  section {
-  }
   /* Portfolio important settings */
   .portfolio-block {
     padding-top: 100px;
@@ -127,23 +125,25 @@
     display: table;
     margin: 0 auto;
   }
+  /* Buttonal */
 
-  .glow-on-hover {
-    width: 180px;
+  .buttonal {
+    width: 220px;
     height: 50px;
     border: none;
     outline: none;
-    color: #ff3e00;
+    color: #fff;
     background: #111;
     cursor: pointer;
     position: relative;
     z-index: 0;
     border-radius: 10px;
-    font-weight: 600;
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
 
-  .glow-on-hover:before {
+  .buttonal:before {
     content: "";
     background: linear-gradient(
       45deg,
@@ -171,19 +171,19 @@
     border-radius: 10px;
   }
 
-  .glow-on-hover:active {
+  .buttonal:active {
     color: #000;
   }
 
-  .glow-on-hover:active:after {
+  .buttonal:active:after {
     background: transparent;
   }
 
-  .glow-on-hover:hover:before {
+  .buttonal:before {
     opacity: 1;
   }
 
-  .glow-on-hover:after {
+  .buttonal:after {
     z-index: -1;
     content: "";
     position: absolute;
@@ -230,7 +230,7 @@
           <div class="anchorControl">
 
             <a href="portfolio">
-              <button class="glow-on-hover" type="button">Portfolio</button>
+              <button class="buttonal" type="button">Portfolio</button>
             </a>
 
           </div>
