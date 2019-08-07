@@ -221,8 +221,7 @@
       <div class="about-me">
         <p style="color: rgb(160,175,190);">
           Hello! I am&nbsp;
-          <strong>Madalin Antonoiu</strong>
-          . I work as a full stack web developer. I have a passion for creating
+          <strong>Madalin Antonoiu</strong>. I work as a full stack web developer, with passion for creating
           blazing fast, pixel perfect, responsive &nbsp;websites.
           <br />
         </p>

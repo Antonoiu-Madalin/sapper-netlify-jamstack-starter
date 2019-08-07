@@ -36,7 +36,7 @@
   .box-a {
     max-width: 60px;
   }
-  
+
   .box-a-rotate {
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
@@ -166,7 +166,7 @@
 
   @media screen and (max-width: 500px) {
     label {
-      padding: 20px;
+      padding: 18px;
       padding-top: 10px;
       padding-bottom: 10px;
     }
