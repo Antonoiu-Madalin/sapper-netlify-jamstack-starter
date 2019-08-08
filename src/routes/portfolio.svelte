@@ -1,3 +1,7 @@
+<script>
+  import AngularCards from "../components/AngularCards.svelte";
+</script>
+
 <style>
   @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
   @import url("https://use.fontawesome.com/releases/v5.1.0/css/all.css");
@@ -553,18 +557,7 @@
     </section>
 
     <section id="content3">
-      <p>
-        Jerky jowl pork chop tongue, kielbasa shank venison. Capicola shank pig
-        ribeye leberkas filet mignon brisket beef kevin tenderloin porchetta.
-        Capicola fatback venison shank kielbasa, drumstick ribeye landjaeger
-        beef kevin tail meatball pastrami prosciutto pancetta. Tail kevin spare
-        ribs ground round ham ham hock brisket shoulder. Corned beef tri-tip
-        leberkas flank sausage ham hock filet mignon beef ribs pancetta turkey.
-      </p>
-      <p>
-        Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick
-        fatback boudin.
-      </p>
+      <AngularCards />
     </section>
 
     <section id="content4">
