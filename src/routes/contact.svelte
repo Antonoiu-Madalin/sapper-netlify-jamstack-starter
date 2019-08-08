@@ -1,46 +1,33 @@
 <svelte:head>
-	<title>Contact</title>
+	<title>Contact | Send email</title>
 </svelte:head>
 
 
+<script>
+  import { createEventDispatcher } from "svelte";
+  import Button from "../components/Button.svelte";
+  import TextInput from "../components/TextInput.svelte";
+  import { isEmpty, isValidEmail } from "../helpers/validation.js";
+
+  export let id = null;
+
+  let fullname = "";
+  let email = "";
+  let description = "";
+  let name = "";
+  let placeholder = "";
+  let rows = "";
+
+  const dispatch = createEventDispatcher();
+
+  $: fullnameValid = !isEmpty(fullname);
+  $: descriptionValid = !isEmpty(description);
+  $: emailValid = isValidEmail(email);
+
+  $: formIsValid = fullnameValid && descriptionValid && emailValid;
+</script>
+
 <style>
-  input[type="text"],
-  textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-  }
-
-  input[type="email"],
-  textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-  }
-
-  input[type="submit"] {
-    background-color: #4caf50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-
-  input[type="submit"]:hover {
-    background-color: #45a049;
-  }
-
   .container {
     border-radius: 5px;
     background-color: #f2f2f2;
@@ -48,21 +35,48 @@
   }
 </style>
 
-
 <h1 style="color: white;">Contact me</h1>
 
 <div class="container">
-  <form method="post" action="https://briskforms.com/go/eacf0e72a032519cba8ae9ce8d390439">
+  <form id='contact-form' method="post" action="https://briskforms.com/go/eacf0e72a032519cba8ae9ce8d390439">
+    
+    <TextInput
+      label="Full Name"
+      name="fullname" 
+      on:input={event => (fullname = event.target.value)}  
+      value={fullname} valid={fullnameValid}   
+      validityMessage="Please enter your full name." 
+      type="text" 
+      id="fname" 
+      placeholder="Your full name.."
+    />
+    
+    <TextInput
+      name="email"
+      id="email"
+      label="E-Mail"
+      type="email"
+      valid={emailValid}
+      validityMessage="Please enter a valid email address."
+      value={email}
+      on:input={event => (email = event.target.value)}
+      placeholder="Your email adress.."
+    />
 
-    <label for="fname">Full Name</label>
-    <input type="text" id="fname" name="fullname" placeholder="Your full name..">
+    <TextInput
+      name="message"
+      id="description"
+      label="Description"
+      controlType="textarea"
+      valid={descriptionValid}
+      validityMessage="Please enter a valid message."
+      bind:value={description} 
+      type="textarea"
+      placeholder="Write me something.."
+      rows="10"
+    />
+      
+      <Button type="submit" value="Submit" disabled={!formIsValid}>Trimite</Button>
 
-		<label for="lname">Email Adress</label>
-    <input type="email" id="lname" name="lastname" placeholder="Your email..">
-
-    <label for="subject">Subject</label>
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
-    <input type="submit" value="Submit">
   </form>
 </div>
