@@ -171,6 +171,213 @@
       padding-bottom: 10px;
     }
   }
+
+  /* Font */
+  @import url("https://fonts.googleapis.com/css?family=Quicksand:400,700");
+
+  .main {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+  }
+
+  .btn {
+    color: #ffffff;
+    padding: 0.8rem;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-weight: 400;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+  }
+
+  .btn:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+  }
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .cards_item {
+    display: flex;
+    padding: 1rem;
+  }
+
+  @media (min-width: 40rem) {
+    .cards_item {
+      width: 50%;
+    }
+  }
+
+  @media (min-width: 56rem) {
+    .cards_item {
+      width: 33.3333%;
+    }
+  }
+
+  .card {
+    background-color: white;
+    border-radius: 0.25rem;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .card_content {
+    padding: 1rem;
+    background: linear-gradient(to bottom left, #ef8d9c 40%, #ffc39e 100%);
+  }
+
+  .card_title {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    margin: 0px;
+  }
+
+  .card_text {
+    color: #ffffff;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+    font-weight: 400;
+  }
+
+  /* VUE */
+  .container {
+    height: 300px;
+    max-width: 600px;
+    top: 60px;
+    left: calc(50% - 300px);
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding-top: 20px;
+  }
+
+  .card-2 {
+    height: 20em;
+    width: 15em;
+    background-color: #17141d;
+    border-radius: 10px;
+    box-shadow: -1rem 0 3rem #000;
+    /*   margin-left: -50px; */
+    transition: 0.4s ease-out;
+    position: relative;
+    left: 0px;
+    display: flex;
+    max-width: 100%;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .card-2:not(:first-child) {
+    margin-left: -50px;
+  }
+
+  .card-2:hover {
+    transform: translateY(-20px);
+    transition: 0.4s ease-out;
+  }
+
+  .card-2:hover ~ .card {
+    position: relative;
+    left: 50px;
+    transition: 0.4s ease-out;
+  }
+
+  .title {
+    color: white;
+    font-weight: 300;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+  }
+
+  .bar {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    height: 5px;
+    width: 150px;
+  }
+
+  .emptybar {
+    background-color: #2e3033;
+    width: 100%;
+    height: 100%;
+  }
+
+  .filledbar {
+    position: absolute;
+    top: 0px;
+    z-index: 3;
+    width: 0px;
+    height: 100%;
+    background: rgb(0, 154, 217);
+    background: linear-gradient(
+      90deg,
+      rgba(0, 154, 217, 1) 0%,
+      rgba(217, 147, 0, 1) 65%,
+      rgba(255, 186, 0, 1) 100%
+    );
+    transition: 0.6s ease-out;
+  }
+
+  .card-2:hover .filledbar {
+    width: 120px;
+    transition: 0.4s ease-out;
+  }
+
+  .circle {
+    position: absolute;
+    top: 150px;
+    left: calc(50% - 60px);
+  }
+
+  .stroke {
+    stroke: white;
+    stroke-dasharray: 360;
+    stroke-dashoffset: 360;
+    transition: 0.6s ease-out;
+  }
+
+  svg {
+    fill: #17141d;
+    stroke-width: 2px;
+  }
+
+  .card-2:hover .stroke {
+    stroke-dashoffset: 100;
+    transition: 0.6s ease-out;
+  }
+
+  @media (max-width: 768px) {
+    .card-2:not(:first-child) {
+      margin-left: 0;
+    }
+    .card-2:hover:not(:first-child) {
+      transform: translateY(-80px);
+      transition: 0.4s ease-out;
+    }
+  }
 </style>
 
 <svelte:head>
@@ -202,38 +409,147 @@
 
     <section id="content1">
 
-      <ul style="padding-left: 30px">
-        <li>Gatsby.js</li>
-        <li>Next.js</li>
-      </ul>
-      <br />
-      <p>
-        Jerky jowl pork chop tongue, kielbasa shank venison. Capicola shank pig
-        ribeye leberkas filet mignon brisket beef kevin tenderloin porchetta.
-        Capicola fatback venison shank kielbasa, drumstick ribeye landjaeger
-        beef kevin tail meatball pastrami prosciutto pancetta. Tail kevin spare
-        ribs ground round ham ham hock brisket shoulder. Corned beef tri-tip
-        leberkas flank sausage ham hock filet mignon beef ribs pancetta turkey.
-      </p>
-      <p>
-        Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick
-        fatback boudin.
-      </p>
+      <div class="main">
+        <ul class="cards">
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image">
+                <img src="https://picsum.photos/500/300/?image=10" />
+              </div>
+              <div class="card_content">
+                <h2 class="card_title">Card Grid Layout</h2>
+                <p class="card_text">
+                  Demo of pixel perfect pure CSS simple responsive card grid
+                  layout
+                </p>
+                <button class="btn card_btn">Read More</button>
+              </div>
+            </div>
+          </li>
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image">
+                <img src="https://picsum.photos/500/300/?image=5" />
+              </div>
+              <div class="card_content">
+                <h2 class="card_title">Card Grid Layout</h2>
+                <p class="card_text">
+                  Demo of pixel perfect pure CSS simple responsive card grid
+                  layout
+                </p>
+                <button class="btn card_btn">Read More</button>
+              </div>
+            </div>
+          </li>
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image">
+                <img src="https://picsum.photos/500/300/?image=11" />
+              </div>
+              <div class="card_content">
+                <h2 class="card_title">Card Grid Layout</h2>
+                <p class="card_text">
+                  Demo of pixel perfect pure CSS simple responsive card grid
+                  layout
+                </p>
+                <button class="btn card_btn">Read More</button>
+              </div>
+            </div>
+          </li>
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image">
+                <img src="https://picsum.photos/500/300/?image=14" />
+              </div>
+              <div class="card_content">
+                <h2 class="card_title">Card Grid Layout</h2>
+                <p class="card_text">
+                  Demo of pixel perfect pure CSS simple responsive card grid
+                  layout
+                </p>
+                <button class="btn card_btn">Read More</button>
+              </div>
+            </div>
+          </li>
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image">
+                <img src="https://picsum.photos/500/300/?image=17" />
+              </div>
+              <div class="card_content">
+                <h2 class="card_title">Card Grid Layout</h2>
+                <p class="card_text">
+                  Demo of pixel perfect pure CSS simple responsive card grid
+                  layout
+                </p>
+                <button class="btn card_btn">Read More</button>
+              </div>
+            </div>
+          </li>
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image">
+                <img src="https://picsum.photos/500/300/?image=2" />
+              </div>
+              <div class="card_content">
+                <h2 class="card_title">Card Grid Layout</h2>
+                <p class="card_text">
+                  Demo of pixel perfect pure CSS simple responsive card grid
+                  layout
+                </p>
+                <button class="btn card_btn">Read More</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
     </section>
 
     <section id="content2">
-      <p>
-        Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick
-        fatback boudin.
-      </p>
-      <p>
-        Jerky jowl pork chop tongue, kielbasa shank venison. Capicola shank pig
-        ribeye leberkas filet mignon brisket beef kevin tenderloin porchetta.
-        Capicola fatback venison shank kielbasa, drumstick ribeye landjaeger
-        beef kevin tail meatball pastrami prosciutto pancetta. Tail kevin spare
-        ribs ground round ham ham hock brisket shoulder. Corned beef tri-tip
-        leberkas flank sausage ham hock filet mignon beef ribs pancetta turkey.
-      </p>
+
+      <div class="container">
+
+        <div class="card-2">
+          <h3 class="title">Card 1</h3>
+          <div class="bar">
+            <div class="emptybar" />
+            <div class="filledbar" />
+          </div>
+          <div class="circle">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <circle class="stroke" cx="60" cy="60" r="50" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="card-2">
+          <h3 class="title">Card 2</h3>
+          <div class="bar">
+            <div class="emptybar" />
+            <div class="filledbar" />
+          </div>
+          <div class="circle">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <circle class="stroke" cx="60" cy="60" r="50" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="card-2">
+          <h3 class="title">Card 3</h3>
+          <div class="bar">
+            <div class="emptybar" />
+            <div class="filledbar" />
+          </div>
+          <div class="circle">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <circle class="stroke" cx="60" cy="60" r="50" />
+            </svg>
+          </div>
+        </div>
+
+      </div>
     </section>
 
     <section id="content3">
@@ -267,69 +583,3 @@
     </section>
   </div>
 </main>
-
-<!-- Make radio and chose based on JavaScript, Php etc to show, with {#if}-->
-<!--<main class="grid">
-		<div class="box-a" style="font-size: 30px;">
-			<div class="box-a-rotate">
-				<input id="tab10" type="radio" name="main-tabs-secondary">
-				<label for="tab10"><span style="color: #4f5b93;">PHP</span></label>
-			</div>
-		</div>
-
-		<div class="box-b">
-			<input id="tab11" type="radio" name="tabs-secondary">
-			<label for="tab11">Laravel</label>
-
-			<input id="tab12" type="radio" name="tabs-secondary">
-			<label for="tab12">Vue</label>
-
-			<input id="tab13" type="radio" name="tabs-secondary">
-			<label for="tab13" >Angular</label>
-
-			<input id="tab14" type="radio" name="tabs-secondary">
-			<label for="tab14">PHP</label>
-
-			<section id="content11">
-
-					<ul style="padding-left: 17px">
-						<li>Gatsby.js</li>
-						<li>Next.js</li>
-					</ul>
-					<br>
-					<p>
-						Jerky jowl pork chop tongue, kielbasa shank venison. Capicola shank pig ribeye leberkas filet mignon brisket beef kevin tenderloin porchetta. Capicola fatback venison shank kielbasa, drumstick ribeye landjaeger beef kevin tail meatball pastrami prosciutto pancetta. Tail kevin spare ribs ground round ham ham hock brisket shoulder. Corned beef tri-tip leberkas flank sausage ham hock filet mignon beef ribs pancetta turkey.
-					</p>
-					<p>
-						Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin.
-					</p>
-			</section>
-
-			<section id="content12">
-				<p>
-					Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin.
-				</p>
-				<p>
-					Jerky jowl pork chop tongue, kielbasa shank venison. Capicola shank pig ribeye leberkas filet mignon brisket beef kevin tenderloin porchetta. Capicola fatback venison shank kielbasa, drumstick ribeye landjaeger beef kevin tail meatball pastrami prosciutto pancetta. Tail kevin spare ribs ground round ham ham hock brisket shoulder. Corned beef tri-tip leberkas flank sausage ham hock filet mignon beef ribs pancetta turkey.
-				</p>
-			</section>
-
-			<section id="content13">
-				<p>
-					Jerky jowl pork chop tongue, kielbasa shank venison. Capicola shank pig ribeye leberkas filet mignon brisket beef kevin tenderloin porchetta. Capicola fatback venison shank kielbasa, drumstick ribeye landjaeger beef kevin tail meatball pastrami prosciutto pancetta. Tail kevin spare ribs ground round ham ham hock brisket shoulder. Corned beef tri-tip leberkas flank sausage ham hock filet mignon beef ribs pancetta turkey.
-				</p>
-				<p>
-					Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin.
-				</p>
-			</section>
-
-			<section id="content14">
-				<p>
-					Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin.
-				</p>
-				<p>
-					Jerky jowl pork chop tongue, kielbasa shank venison. Capicola shank pig ribeye leberkas filet mignon brisket beef kevin tenderloin porchetta. Capicola fatback venison shank kielbasa, drumstick ribeye landjaeger beef kevin tail meatball pastrami prosciutto pancetta. Tail kevin spare ribs ground round ham ham hock brisket shoulder. Corned beef tri-tip leberkas flank sausage ham hock filet mignon beef ribs pancetta turkey.
-				</p>
-			</section>
-	</div>
-</main>-->
