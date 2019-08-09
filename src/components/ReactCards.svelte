@@ -27,8 +27,7 @@
     display: flex;
     border-radius: 6px;
     color: #151d28;
-    box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.2),
-      0 0 1rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.2), 0 0 1rem rgba(0, 0, 0, 0.2);
     overflow: hidden;
     flex-direction: column;
     opacity: 0;
@@ -188,11 +187,36 @@
       margin-top: -7.5rem;
     }
   }
+  /*Blur */
+
+  .blur_grayscale {
+    -webkit-filter: blur(5px) grayscale(1);
+    -moz-filter: blur(5px) grayscale(1);
+    -o-filter: blur(5px) grayscale(1);
+    -ms-filter: blur(5px) grayscale(1);
+    filter: blur(5px) grayscale(1);
+    max-width: 100%;
+    height: auto;
+    background-color: #090a0f;
+    z-index: 9999;
+    /*noselect*/
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                              supported by Chrome and Opera */
+    cursor: not-allowed;
+  }
+  .mouseover_pointer {
+    cursor: pointer;
+  }
 </style>
 
 <div class="container">
 
-  <li class="cards_item">
+  <li class="cards_item mouseover_pointer">
     <div class="card">
       <div class="card__image-container">
         <img
@@ -218,7 +242,7 @@
       </svg>
 
       <div class="card__content">
-        <h1 class="card__title">E-commerce</h1>
+        <h1 class="card__title">E-commerce#1</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolor
           praesentium at quod autem omnis.
@@ -227,7 +251,7 @@
     </div>
   </li>
 
-  <li class="cards_item">
+  <li class="cards_item blur_grayscale">
     <div class="card">
       <div class="card__image-container">
         <img
@@ -262,7 +286,7 @@
     </div>
   </li>
 
-  <li class="cards_item">
+  <li class="cards_item blur_grayscale">
     <div class="card">
       <div class="card__image-container">
         <img
@@ -297,7 +321,7 @@
     </div>
   </li>
 
-  <li class="cards_item">
+  <li class="cards_item blur_grayscale">
     <div class="card">
       <div class="card__image-container">
         <img
@@ -332,7 +356,7 @@
     </div>
   </li>
 
-  <li class="cards_item">
+  <li class="cards_item blur_grayscale">
     <div class="card">
       <div class="card__image-container">
         <img
@@ -367,7 +391,7 @@
     </div>
   </li>
 
-  <li class="cards_item">
+  <li class="cards_item blur_grayscale">
     <div class="card">
       <div class="card__image-container">
         <img
@@ -401,5 +425,6 @@
       </div>
     </div>
   </li>
+
 
 </div>
