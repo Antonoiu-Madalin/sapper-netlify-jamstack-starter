@@ -195,7 +195,7 @@
 
 <div class="container">
 
-  <li class="cards_item" in:fly={{ y: 200, duration: 1500 }} out:fade>
+  <li class="cards_item" >
     <div class="card">
       <div class="card__image-container">
         <img class="card__image" src="https://images.unsplash.com/photo-1519999482648-25049ddd37b1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2126&q=80" alt="">
@@ -227,7 +227,7 @@
         </svg>
       
       <div class="card__content">
-        <h1 class="card__title">E-commerce</h1>
+        <h1 class="card__title">Restaurant</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolor praesentium at quod autem omnis.</p>
       </div>
     </div>
@@ -246,7 +246,7 @@
         </svg>
       
       <div class="card__content">
-        <h1 class="card__title">E-commerce</h1>
+        <h1 class="card__title">Blogging</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolor praesentium at quod autem omnis.</p>
       </div>
     </div>
