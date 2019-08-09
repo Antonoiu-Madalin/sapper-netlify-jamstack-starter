@@ -2,13 +2,13 @@ body {
   font-family: Tahoma, Geneva, sans-serif;
   padding-bottom: 0px;
   margin: 0px;
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%) fixed;
+  background: #090a0f;
+  height: 100vh;
 }
 
 html {
   height: 100vh;
   background: #090a0f;
-  
 }
 
 strong {
