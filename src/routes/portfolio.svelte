@@ -44,6 +44,9 @@
     -o-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
   }
 
   section {
