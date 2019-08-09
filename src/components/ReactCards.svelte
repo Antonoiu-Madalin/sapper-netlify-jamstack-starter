@@ -5,6 +5,11 @@
     line-height: 1.5;
     font-family: "Open Sans", sans-serif;
   }
+  a {
+    text-decoration: inherit; /* no underline */
+    color: inherit;
+  }
+
   img {
     height: auto;
     max-width: 100%;
@@ -206,8 +211,8 @@
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently
-                                              supported by Chrome and Opera */
-    cursor: not-allowed;
+                                                              supported by Chrome and Opera */
+    /*cursor: not-allowed;*/
   }
   .mouseover_pointer {
     cursor: pointer;
@@ -217,6 +222,7 @@
 <div class="container">
 
   <li class="cards_item mouseover_pointer">
+  <a href="ecommerce">
     <div class="card">
       <div class="card__image-container">
         <img
@@ -249,6 +255,7 @@
         </p>
       </div>
     </div>
+  </a>
   </li>
 
   <li class="cards_item blur_grayscale">

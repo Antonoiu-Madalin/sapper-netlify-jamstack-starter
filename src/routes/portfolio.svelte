@@ -67,6 +67,12 @@
     text-align: center;
     color: #abc;
     border: 1px solid transparent;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently */
   }
 
   label:before {
@@ -175,6 +181,14 @@
       padding-bottom: 10px;
     }
   }
+
+  .disabl {
+    -webkit-filter: blur(3px) grayscale(1);
+    -moz-filter: blur(3px) grayscale(1);
+    -o-filter: blur(3px) grayscale(1);
+    -ms-filter: blur(3px) grayscale(1);
+    filter: blur(3px) grayscale(1);
+  }
 </style>
 
 <svelte:head>
@@ -202,8 +216,8 @@
     <input id="tab3" type="radio" name="tabs" />
     <label for="tab3">Angular.JS</label>
 
-    <input id="tab4" type="radio" name="tabs" />
-    <label for="tab4">Ember.JS</label>
+    <input id="tab4" type="radio" name="tabs" disabled />
+    <label class="disabl" for="tab4"  >Ember.JS</label>
     
     <section id="content1" class="ReactCards">
       <ReactCards />

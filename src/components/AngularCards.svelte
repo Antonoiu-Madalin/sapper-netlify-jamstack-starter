@@ -23,10 +23,10 @@
   }
 
   .card {
-    background: #b52e31;
+    background: #42b883;
     display: flex;
     border-radius: 6px;
-    color: #aaa;
+    color: #151d28;
     box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.2), 0 0 1rem rgba(0, 0, 0, 0.2);
     overflow: hidden;
     flex-direction: column;
@@ -55,7 +55,7 @@
     margin-top: -6.5rem;
   }
   .card__title {
-    color: white;
+    color: #151d28;
     font-weight: 800;
     letter-spacing: 0.01em;
   }
@@ -79,7 +79,7 @@
       d: path(
         "M -2 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 802 400"
       );
-      stroke: #545581;
+      stroke: #151d28;
     }
   }
   @keyframes ContentFadeIn {
@@ -187,11 +187,23 @@
       margin-top: -7.5rem;
     }
   }
+
+  .blur_grayscale {
+    -webkit-filter: blur(5.5px) grayscale(1);
+    -moz-filter: blur(5.5px) grayscale(1);
+    -o-filter: blur(5.5px) grayscale(1);
+    -ms-filter: blur(5.5px) grayscale(1);
+    filter: blur(5.5px) grayscale(1);
+    max-width: 100%;
+    height: auto;
+    background-color: #090a0f;
+    z-index: 9999;
+  }
 </style>
 
 <div class="container">
 
-  <li class="cards_item">
+  <li class="cards_item blur_grayscale ">
     <div class="card">
       <div class="card__image-container">
         <img
@@ -206,7 +218,7 @@
           d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650
           300 Q 750 450 800 400 L 800 500 L 0 500"
           stroke="transparent"
-          fill="#b52e31" />
+          fill="#42b883" />
         <path
           class="card__line"
           d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650
@@ -226,7 +238,7 @@
     </div>
   </li>
 
-  <li class="cards_item">
+  <li class="cards_item blur_grayscale">
     <div class="card">
       <div class="card__image-container">
         <img
@@ -241,7 +253,7 @@
           d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650
           300 Q 750 450 800 400 L 800 500 L 0 500"
           stroke="transparent"
-          fill="#b52e31" />
+          fill="#42b883" />
         <path
           class="card__line"
           d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650
@@ -261,7 +273,7 @@
     </div>
   </li>
 
-  <li class="cards_item">
+  <li class="cards_item blur_grayscale">
     <div class="card">
       <div class="card__image-container">
         <img
@@ -276,7 +288,7 @@
           d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650
           300 Q 750 450 800 400 L 800 500 L 0 500"
           stroke="transparent"
-          fill="#b52e31" />
+          fill="#42b883" />
         <path
           class="card__line"
           d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650
@@ -296,7 +308,7 @@
     </div>
   </li>
 
-  <li class="cards_item">
+  <li class="cards_item blur_grayscale">
     <div class="card">
       <div class="card__image-container">
         <img
@@ -311,7 +323,7 @@
           d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650
           300 Q 750 450 800 400 L 800 500 L 0 500"
           stroke="transparent"
-          fill="#b52e31" />
+          fill="#42b883" />
         <path
           class="card__line"
           d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650
@@ -331,7 +343,7 @@
     </div>
   </li>
 
-  <li class="cards_item">
+  <li class="cards_item blur_grayscale">
     <div class="card">
       <div class="card__image-container">
         <img
@@ -346,7 +358,7 @@
           d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650
           300 Q 750 450 800 400 L 800 500 L 0 500"
           stroke="transparent"
-          fill="#b52e31" />
+          fill="#42b883" />
         <path
           class="card__line"
           d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650
@@ -366,7 +378,7 @@
     </div>
   </li>
 
-  <li class="cards_item">
+  <li class="cards_item blur_grayscale">
     <div class="card">
       <div class="card__image-container">
         <img
@@ -381,7 +393,7 @@
           d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650
           300 Q 750 450 800 400 L 800 500 L 0 500"
           stroke="transparent"
-          fill="#b52e31" />
+          fill="#42b883" />
         <path
           class="card__line"
           d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650
