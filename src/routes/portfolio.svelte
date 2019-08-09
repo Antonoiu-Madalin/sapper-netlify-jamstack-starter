@@ -1,5 +1,7 @@
 <script>
-  import EmberCards from "../components/EmberCards.svelte";
+  import ReactCards from "../components/ReactCards.svelte";
+  import VueCards from "../components/VueCards.svelte";
+  import AngularCards from "../components/AngularCards.svelte";
 </script>
 
 <style>
@@ -199,20 +201,20 @@
     <input id="tab4" type="radio" name="tabs" />
     <label for="tab4">Ember.JS</label>
 
-    <section id="content1">
-       <EmberCards />
+    <section id="content1" class="ReactCards">
+      <ReactCards />
     </section>
 
-    <section id="content2">
-      <EmberCards />
+    <section id="content2" class="VueCards">
+      <VueCards />
     </section>
 
-    <section id="content3">
-       <EmberCards />
+    <section id="content3" class="AngularCards">
+      <AngularCards />
     </section>
 
     <section id="content4">
-      <EmberCards />
+      <ReactCards />
     </section>
 
   </div>
