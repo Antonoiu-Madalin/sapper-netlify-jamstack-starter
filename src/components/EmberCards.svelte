@@ -252,5 +252,62 @@
     </div>
   </li>
 
+    <li class="cards_item" >
+    <div class="card">
+      <div class="card__image-container">
+        <img class="card__image" src="https://images.unsplash.com/photo-1565206328423-b3f690ac1535?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80" alt="">
+      </div>
+        
+        <svg class="card__svg" viewBox="0 0 800 500">
+
+          <path d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500" stroke="transparent" fill="#333"/>
+          <path class="card__line" d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400" stroke="pink" stroke-width="3" fill="transparent"/>
+        </svg>
+      
+      <div class="card__content">
+        <h1 class="card__title">Personal</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolor praesentium at quod autem omnis.</p>
+      </div>
+    </div>
+  </li>
+
+    <li class="cards_item"  >
+    <div class="card">
+      <div class="card__image-container">
+        <img class="card__image" src="https://images.unsplash.com/photo-1565205537966-4827080d5382?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2126&q=80" alt="">
+      </div>
+        
+        <svg class="card__svg" viewBox="0 0 800 500">
+
+          <path d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500" stroke="transparent" fill="#333"/>
+          <path class="card__line" d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400" stroke="pink" stroke-width="3" fill="transparent"/>
+        </svg>
+      
+      <div class="card__content">
+        <h1 class="card__title">E-Book</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolor praesentium at quod autem omnis.</p>
+      </div>
+    </div>
+  </li>
+
+  <li class="cards_item">
+    <div class="card">
+      <div class="card__image-container">
+        <img class="card__image" src="https://images.unsplash.com/photo-1565205537966-4827080d5382?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2126&q=80" alt="">
+      </div>
+        
+        <svg class="card__svg" viewBox="0 0 800 500">
+
+          <path d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500" stroke="transparent" fill="#333"/>
+          <path class="card__line" d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400" stroke="pink" stroke-width="3" fill="transparent"/>
+        </svg>
+      
+      <div class="card__content">
+        <h1 class="card__title">Travelling</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolor praesentium at quod autem omnis.</p>
+      </div>
+    </div>
+  </li>
+
 
 </div>
