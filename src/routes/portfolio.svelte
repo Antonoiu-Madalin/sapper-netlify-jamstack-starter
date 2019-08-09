@@ -192,6 +192,7 @@
   </div>
 
   <div class="box-b">
+  
     <input id="tab1" type="radio" name="tabs" checked />
     <label for="tab1">React.JS</label>
 
@@ -203,7 +204,7 @@
 
     <input id="tab4" type="radio" name="tabs" />
     <label for="tab4">Ember.JS</label>
-
+    
     <section id="content1" class="ReactCards">
       <ReactCards />
     </section>
