@@ -49,14 +49,14 @@
     letter-spacing: 0.01em;
   }
   .card__content {
-    margin-top: -10rem;
     opacity: 0;
     animation: ContentFadeIn 0.8s 1.6s forwards;
     padding: 0 10px;
+    margin-top: -3rem;
   }
   .card__svg {
     position: relative;
-    bottom: 75px; /* 65, 115 normal*/
+    margin-top: -6.5rem;
   }
 
   @keyframes LineFadeIn {
@@ -109,15 +109,95 @@
     }
   }
 
+  @media (max-width: 341px) {
+    .card__title {
+      font-size: 140%;
+    }
+    .card__content {
+      margin-top: -1rem;
+    }
+    .card__svg {
+      position: relative;
+      margin-top: -6rem;
+    }
+  }
+
+  @media (min-width: 330px) and (max-width: 364px) {
+    .card__content {
+      margin-top: -1.5rem;
+    }
+    .card__svg {
+      margin-top: -7rem;
+    }
+  }
+
+  @media (min-width: 365px) and (max-width: 394px) {
+    .card__svg {
+      margin-top: -8rem;
+    }
+  }
+
+  @media (min-width: 395px) and (max-width: 439px) {
+    .card__svg {
+      margin-top: -9.5rem;
+    }
+  }
+
+  @media (min-width: 440px) and (max-width: 488px) {
+    .card__svg {
+      margin-top: -11rem;
+    }
+  }
+
+  @media (min-width: 489px) and (max-width: 530px) {
+    .card__svg {
+      margin-top: -12.5rem;
+    }
+  }
+
+  @media (min-width: 531px) and (max-width: 570px) {
+    .card__svg {
+      margin-top: -14rem;
+    }
+  }
+
+  @media (min-width: 571px) and (max-width: 610px) {
+    .card__svg {
+      margin-top: -15.5rem;
+    }
+  }
+
+  @media (min-width: 611px) and (max-width: 645px) {
+    .card__svg {
+      margin-top: -17rem;
+    }
+  }
+
   @media (min-width: 40rem) {
     .cards_item {
       width: 50%;
     }
+    .card__svg {
+      margin-top: -9rem;
+    }
   }
 
+  @media (min-width: 735px) and (max-width: 896px) {
+    .card__svg {
+      margin-top: -10.5rem;
+    }
+  }
+
+  /* De la 900 in colo, cand sunt 3 pe linie, DONE */
   @media (min-width: 56rem) {
     .cards_item {
       width: 33.3333%;
+    }
+    .card__content {
+      margin-top: -1.5rem;
+    }
+    .card__svg {
+      margin-top: -7.5rem;
     }
   }
 </style>
