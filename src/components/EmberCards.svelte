@@ -31,7 +31,10 @@
     box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.2), 0 0 1rem rgba(0, 0, 0, 0.2);
     overflow: hidden;
     flex-direction: column;
+    opacity: 0;
+    animation: LineFadeIn 0.2s 0.2s forwards ease-in;
   }
+
   .card__line {
     opacity: 0;
     animation: LineFadeIn 0.25s 0.25s forwards ease-in;
@@ -192,7 +195,7 @@
 
 <div class="container">
 
-  <li class="cards_item">
+  <li class="cards_item" in:fly={{ y: 200, duration: 1500 }} out:fade>
     <div class="card">
       <div class="card__image-container">
         <img class="card__image" src="https://images.unsplash.com/photo-1519999482648-25049ddd37b1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2126&q=80" alt="">
@@ -211,7 +214,7 @@
     </div>
   </li>
 
-    <li class="cards_item">
+    <li class="cards_item"  >
     <div class="card">
       <div class="card__image-container">
         <img class="card__image" src="https://images.unsplash.com/photo-1519999482648-25049ddd37b1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2126&q=80" alt="">
