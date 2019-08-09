@@ -27,8 +27,7 @@
     display: flex;
     border-radius: 6px;
     color: #aaa;
-    box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.2),
-      0 0 1rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.2), 0 0 1rem rgba(0, 0, 0, 0.2);
     overflow: hidden;
     flex-direction: column;
     opacity: 0;
