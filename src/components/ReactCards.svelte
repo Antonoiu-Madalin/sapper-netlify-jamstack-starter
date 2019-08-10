@@ -211,7 +211,7 @@
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently
-                                                                supported by Chrome and Opera */
+                                                                      supported by Chrome and Opera */
     /*cursor: not-allowed;*/
   }
   .mouseover_pointer {
@@ -249,9 +249,9 @@
 
       <div class="card__content">
         <h1 class="card__title">E-commerce#1</h1>
+        <p>JAMstack</p>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolor
-          praesentium at quod autem omnis.
+        E-commerce website built mainly with <strong>Gatsby</strong> and <strong>Stripe</strong>.
         </p>
       </div>
     </div>

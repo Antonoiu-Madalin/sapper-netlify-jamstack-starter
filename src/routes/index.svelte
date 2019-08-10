@@ -209,7 +209,7 @@
 </style>
 
 <svelte:head>
-  <title>Sapper netflify jamstack template</title>
+  <title>Home | Madalin Antonoiu</title>
 </svelte:head>
 
 <main class="page lanidng-page">

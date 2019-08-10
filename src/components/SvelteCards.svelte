@@ -211,7 +211,7 @@
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently
-                                                                                  supported by Chrome and Opera */
+                                                                                        supported by Chrome and Opera */
     /*cursor: not-allowed;*/
   }
   .mouseover_pointer {
@@ -249,8 +249,9 @@
 
       <div class="card__content">
         <h1 class="card__title">Portfolio</h1>
+        <p style="text-align:right">JAMstack</p>
         <p>
-          My portfolio website has been designed in <strong>Svelte.js</strong>. The budle size is super small comparing
+          My portfolio website has been built with <strong>Svelte.js</strong>. The budle size is super small comparing
           to the others.
         </p>
       </div>

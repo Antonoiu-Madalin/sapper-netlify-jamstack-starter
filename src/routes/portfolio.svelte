@@ -208,7 +208,7 @@
 </style>
 
 <svelte:head>
-  <title>Portfolio</title>
+  <title>Portfolio | Madalin Antonoiu</title>
 </svelte:head>
 
 <main class="grid">
@@ -226,14 +226,14 @@
     <input id="tab1" type="radio" name="tabs" checked />
     <label for="tab1">React</label>
 
+    <input id="tab4" type="radio" name="tabs" />
+    <label for="tab4">Svelte</label>
+
     <input id="tab2" type="radio" name="tabs" />
     <label for="tab2">Vue</label>
 
     <input id="tab3" type="radio" name="tabs" />
     <label for="tab3">Angular</label>
-
-    <input id="tab4" type="radio" name="tabs" />
-    <label for="tab4">Svelte</label>
 
     <input id="tab5" type="radio" name="tabs" disabled />
     <label class="disabl" for="tab5">Ember</label>

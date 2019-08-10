@@ -72,7 +72,7 @@
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently
-                                      supported by Chrome and Opera */
+                                          supported by Chrome and Opera */
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
@@ -94,8 +94,9 @@
 </style>
 
 <svelte:head>
-  <title>Contact | Send email</title>
+  <title>Contact | Madalin Antonoiu</title>
 </svelte:head>
+
 <h1 style="color: white; ">Contact me</h1>
 <hr style="max-width: 300px; margin-left: 0;" />
 
