@@ -2,6 +2,7 @@
   import ReactCards from "../components/ReactCards.svelte";
   import VueCards from "../components/VueCards.svelte";
   import AngularCards from "../components/AngularCards.svelte";
+  import SvelteCards from "../components/SvelteCards.svelte";
 </script>
 
 <style>
@@ -102,15 +103,16 @@
     content: "\f420";
   }
 
-  label[for*="4"]:before {
+  label[for*="5"]:before {
     font-family: "Font Awesome 5 Brands";
     content: "\f423";
   }
 
-  label[for*="5"]:before {
-    content: url(svelte.svg);
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
+  label[for*="4"]:before {
+    font-family: "Font Awesome 5 Brands";
+    content: "\f42a";
+    -webkit-filter: blur(1.5px);
+    filter: blur(1.5px);
   }
 
   label:hover {
@@ -140,20 +142,19 @@
   }
 
   input:checked + label[for*="4"] {
+    color: #fc6621;
+    border: 1px solid #18222e;
+    border-top: 2px solid #fc6621;
+    border-bottom: 1px solid #10161e;
+  }
+
+  input:checked + label[for*="5"] {
     color: #f23819;
     border: 1px solid #18222e;
     border-top: 2px solid #f23819;
     border-bottom: 1px solid #10161e;
   }
 
-  input:checked + label[for*="5"] {
-    color: #fc6621;
-    border: 1px solid #18222e;
-    border-top: 2px solid #fc6621;
-    border-bottom: 1px solid #10161e;
-    -webkit-filter: none;
-    filter: none;
-  }
   #tab1:checked ~ #content1,
   #tab2:checked ~ #content2,
   #tab3:checked ~ #content3,
@@ -223,19 +224,21 @@
   <div class="box-b">
   
     <input id="tab1" type="radio" name="tabs" checked />
-    <label for="tab1">React.JS</label>
+    <label for="tab1">React</label>
 
     <input id="tab2" type="radio" name="tabs" />
-    <label for="tab2">Vue.JS</label>
+    <label for="tab2">Vue</label>
 
     <input id="tab3" type="radio" name="tabs" />
-    <label for="tab3">Angular.JS</label>
+    <label for="tab3">Angular</label>
 
-    <input id="tab4" type="radio" name="tabs" disabled />
-    <label class="disabl" for="tab4"  >Ember.JS</label>
+    <input id="tab4" type="radio" name="tabs" />
+    <label for="tab4">Svelte</label>
 
-    <input id="tab5" type="radio" name="tabs" />
-    <label for="tab5">Svelte.JS</label>
+    <input id="tab5" type="radio" name="tabs" disabled />
+    <label class="disabl" for="tab5">Ember</label>
+  
+
 
 
     <section id="content1" class="ReactCards">
@@ -251,7 +254,7 @@
     </section>
 
     <section id="content4">
-      <ReactCards />
+      <SvelteCards />
     </section>
 
    <section id="content5">
