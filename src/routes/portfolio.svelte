@@ -88,17 +88,22 @@
     font-size: 40px;
     color: #f0db4f;
   }
-
   label[for*="1"]:before {
     font-family: "Font Awesome 5 Brands";
-    content: "\f41b";
+    content: "\f42a";
+    -webkit-filter: blur(1.5px);
+    filter: blur(1.5px);
   }
-  label[for*="2"]:before {
+    label[for*="2"]:before {
     font-family: "Font Awesome 5 Brands";
     content: "\f41f";
   }
-
   label[for*="3"]:before {
+    font-family: "Font Awesome 5 Brands";
+    content: "\f41b";
+  }
+
+  label[for*="4"]:before {
     font-family: "Font Awesome 5 Brands";
     content: "\f420";
   }
@@ -108,22 +113,15 @@
     content: "\f423";
   }
 
-  label[for*="4"]:before {
-    font-family: "Font Awesome 5 Brands";
-    content: "\f42a";
-    -webkit-filter: blur(1.5px);
-    filter: blur(1.5px);
-  }
-
   label:hover {
     color: #789;
     cursor: pointer;
   }
 
   input:checked + label[for*="1"] {
-    color: #0af;
+    color: #fc6621;
     border: 1px solid #18222e;
-    border-top: 2px solid #0af;
+    border-top: 2px solid #fc6621;;
     border-bottom: 1px solid #10161e;
   }
 
@@ -135,23 +133,23 @@
   }
 
   input:checked + label[for*="3"] {
+    color: #0af;
+    border: 1px solid #18222e;
+    border-top: 2px solid #0af;
+    border-bottom: 1px solid #10161e;
+  }
+
+  input:checked + label[for*="4"] {
     color: #b52e31;
     border: 1px solid #18222e;
     border-top: 2px solid #b52e31;
     border-bottom: 1px solid #10161e;
   }
 
-  input:checked + label[for*="4"] {
-    color: #fc6621;
-    border: 1px solid #18222e;
-    border-top: 2px solid #fc6621;
-    border-bottom: 1px solid #10161e;
-  }
-
   input:checked + label[for*="5"] {
-    color: #f23819;
+    color: #b52e31;
     border: 1px solid #18222e;
-    border-top: 2px solid #f23819;
+    border-top: 2px solid #b52e31;
     border-bottom: 1px solid #10161e;
   }
 
@@ -205,6 +203,9 @@
     -ms-filter: blur(3px) grayscale(1);
     filter: blur(3px) grayscale(1);
   }
+
+ 
+  
 </style>
 
 <svelte:head>
@@ -224,16 +225,16 @@
   <div class="box-b">
   
     <input id="tab1" type="radio" name="tabs" checked />
-    <label for="tab1">React</label>
-
-    <input id="tab4" type="radio" name="tabs" />
-    <label for="tab4">Svelte</label>
+    <label for="tab1">Svelte</label>
 
     <input id="tab2" type="radio" name="tabs" />
     <label for="tab2">Vue</label>
 
     <input id="tab3" type="radio" name="tabs" />
-    <label for="tab3">Angular</label>
+    <label for="tab3">React</label>
+
+    <input id="tab4" type="radio" name="tabs" />
+    <label for="tab4">Angular</label>
 
     <input id="tab5" type="radio" name="tabs" disabled />
     <label class="disabl" for="tab5">Ember</label>
@@ -242,7 +243,7 @@
 
 
     <section id="content1" class="ReactCards">
-      <ReactCards />
+      <SvelteCards />
     </section>
 
     <section id="content2" class="VueCards">
@@ -250,11 +251,11 @@
     </section>
 
     <section id="content3" class="AngularCards">
-      <AngularCards />
+      <ReactCards />
     </section>
 
     <section id="content4">
-      <SvelteCards />
+      <AngularCards />
     </section>
 
    <section id="content5">

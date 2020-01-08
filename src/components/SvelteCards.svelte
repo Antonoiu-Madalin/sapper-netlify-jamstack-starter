@@ -13,7 +13,10 @@
   img {
     height: auto;
     max-width: 100%;
-    vertical-align: middle;
+  
+    background-size: cover;
+    background-repeat: no-repeat;
+    
   }
   .container {
     display: flex;
@@ -28,170 +31,70 @@
   }
 
   .card {
-    background: #fc6621;
+    position: relative;
+    background: #fc6621; /*Specific to React content part, not svg #42b883 , #fc6621; svelte , #42b883 vue*/
     display: flex;
     border-radius: 6px;
     color: #151d28;
-    box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.2), 0 0 1rem rgba(0, 0, 0, 0.2);
     overflow: hidden;
     flex-direction: column;
-    opacity: 0;
-    animation: LineFadeIn 0.2s 0.2s forwards ease-in;
+    opacity: 1; max-height:40rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   }
+  .card:hover{
+     box-shadow: 0 7px 14px#fc6621, 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+
+
   .card__line {
-    opacity: 0;
-    animation: LineFadeIn 0.25s 0.25s forwards ease-in;
+    opacity: 1;
+   
   }
-  .card__image {
-    opacity: 0;
-    animation: ImageFadeIn 0.4s 0.6s forwards;
-  }
-  .card__content {
-    opacity: 0;
-    animation: ContentFadeIn 0.6s 0.8s forwards;
+
+  .card__content{
     padding: 0 10px;
-    margin-top: -3rem;
+ 
   }
-  .card__image-container {
-    margin: auto;
-  }
+
   .card__svg {
-    position: relative;
-    margin-top: -6.5rem;
+  position: absolute; 
+  top:11.5%;
   }
   .card__title {
     color: #151d28;
     font-weight: 800;
     letter-spacing: 0.01em;
+    z-index: 9999999;
   }
-  @keyframes LineFadeIn {
-    0% {
-      opacity: 0;
-      d: path(
-        "M 0 300 Q 0 300 0 300 Q 0 300 0 300 C 0 300 0 300 0 300 Q 0 300 0 300 "
-      );
-      stroke: #fff;
-    }
-    50% {
-      opacity: 1;
-      d: path(
-        "M 0 300 Q 50 300 100 300 Q 250 300 350 300 C 350 300 500 300 650 300 Q 750 300 800 300"
-      );
-      stroke: #888bff;
-    }
-    100% {
-      opacity: 1;
-      d: path(
-        "M -2 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 802 400"
-      );
-      stroke: #151d28;
-    }
+
+
+  @media (max-width: 370px) {
+    .card__title { font-size: 125%; margin-top: 8px;}
+   
   }
-  @keyframes ContentFadeIn {
-    0% {
-      transform: translateY(-1rem);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  @keyframes ImageFadeIn {
-    0% {
-      transform: translate(-0.5rem, -0.5rem) scale(1.05);
-      opacity: 0;
-      filter: blur(2px);
-    }
-    50% {
-      opacity: 1;
-      filter: blur(2px);
-    }
-    100% {
-      transform: translateY(0) scale(1);
-      opacity: 1;
-      filter: blur(0);
-    }
-  }
-  @media (max-width: 341px) {
-    .card__title {
-      font-size: 140%;
-    }
-    .card__content {
-      margin-top: -1rem;
-    }
-    .card__svg {
-      position: relative;
-      margin-top: -6rem;
-    }
-  }
-  @media (min-width: 330px) and (max-width: 364px) {
-    .card__content {
-      margin-top: -1.5rem;
-    }
-    .card__svg {
-      margin-top: -7rem;
-    }
-  }
-  @media (min-width: 365px) and (max-width: 394px) {
-    .card__svg {
-      margin-top: -8rem;
-    }
-  }
-  @media (min-width: 395px) and (max-width: 439px) {
-    .card__svg {
-      margin-top: -9.5rem;
-    }
-  }
-  @media (min-width: 440px) and (max-width: 488px) {
-    .card__svg {
-      margin-top: -11rem;
-    }
-  }
-  @media (min-width: 489px) and (max-width: 530px) {
-    .card__svg {
-      margin-top: -12.5rem;
-    }
-  }
-  @media (min-width: 531px) and (max-width: 570px) {
-    .card__svg {
-      margin-top: -14rem;
-    }
-  }
-  @media (min-width: 571px) and (max-width: 610px) {
-    .card__svg {
-      margin-top: -15.5rem;
-    }
-  }
-  @media (min-width: 611px) and (max-width: 645px) {
-    .card__svg {
-      margin-top: -17rem;
-    }
+   @media (max-width: 30rem) {
+    .card__svg{top:14.5%;}
+    .container {margin: 0;}
+   }
+   @media (min-width: 30rem) {
+    .card__svg{top:16.1%;}
+    .container {margin: 0 40px;}
+    .card__title { margin-top: 12px;}
   }
   @media (min-width: 40rem) {
-    .cards_item {
-      width: 50%;
-    }
-    .card__svg {
-      margin-top: -9rem;
-    }
-  }
-  @media (min-width: 735px) and (max-width: 896px) {
-    .card__svg {
-      margin-top: -10.5rem;
-    }
+    .card__svg{top:14.3%}
+    .cards_item {width: 50%}
+    .container {margin: 0}
   }
   @media (min-width: 56rem) {
-    .cards_item {
-      width: 33.3333%;
-    }
-    .card__content {
-      margin-top: -1.5rem;
-    }
-    .card__svg {
-      margin-top: -7.5rem;
+    .card__svg{top:11.6%;}
+    .cards_item {width: 33.3333%;}
+    .container {margin: 0;}
+    img {
+      min-height:161px;
     }
   }
+
   /*Blur */
 
   .blur_grayscale {
@@ -211,7 +114,7 @@
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently
-                                                                                        supported by Chrome and Opera */
+                                                                      supported by Chrome and Opera */
     /*cursor: not-allowed;*/
   }
   .mouseover_pointer {
@@ -222,8 +125,9 @@
 <div class="container">
 
   <li class="cards_item mouseover_pointer">
-  <a href=".">
+ 
     <div class="card">
+     <a href="/portfolio">
       <div class="card__image-container">
         <img
           class="card__image"
@@ -237,7 +141,7 @@
           d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650
           300 Q 750 450 800 400 L 800 500 L 0 500"
           stroke="transparent"
-          fill="#FC6621" />
+          fill="#fc6621" />
         <path
           class="card__line"
           d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650
@@ -249,14 +153,16 @@
 
       <div class="card__content">
         <h1 class="card__title">Portfolio</h1>
-        <p style="text-align:right">JAMstack</p>
-        <p>
-          My portfolio website has been built with <strong>Svelte.js</strong>. The budle size is super small comparing
-          to the others.
-        </p>
+         
+        <hr>
+          <p>
+          This portfolio website has been built with <strong>Svelte.js</strong> and <strong>Sapper</strong>.
+          </p>
+       
       </div>
+      </a>
     </div>
-  </a>
+  
   </li>
 
   <li class="cards_item blur_grayscale">
@@ -274,7 +180,7 @@
           d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650
           300 Q 750 450 800 400 L 800 500 L 0 500"
           stroke="transparent"
-          fill="#FC6621" />
+          fill="#fc6621" />
         <path
           class="card__line"
           d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650
@@ -286,12 +192,14 @@
 
       <div class="card__content">
         <h1 class="card__title">Pizzeria</h1>
+        
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolor
           praesentium at quod autem omnis.
         </p>
       </div>
-    </div>
+      </div>
+  
   </li>
 
   <li class="cards_item blur_grayscale">
@@ -309,7 +217,7 @@
           d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650
           300 Q 750 450 800 400 L 800 500 L 0 500"
           stroke="transparent"
-          fill="#FC6621" />
+          fill="#fc6621" />
         <path
           class="card__line"
           d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650
@@ -321,11 +229,13 @@
 
       <div class="card__content">
         <h1 class="card__title">Blogging</h1>
+        
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolor
           praesentium at quod autem omnis.
         </p>
-      </div>
+        </div>
+     
     </div>
   </li>
 
@@ -344,7 +254,7 @@
           d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650
           300 Q 750 450 800 400 L 800 500 L 0 500"
           stroke="transparent"
-          fill="#FC6621" />
+          fill="#fc6621" />
         <path
           class="card__line"
           d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650
@@ -356,11 +266,13 @@
 
       <div class="card__content">
         <h1 class="card__title">Personal</h1>
+     
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolor
           praesentium at quod autem omnis.
         </p>
       </div>
+      
     </div>
   </li>
 
@@ -379,7 +291,7 @@
           d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650
           300 Q 750 450 800 400 L 800 500 L 0 500"
           stroke="transparent"
-          fill="#FC6621" />
+          fill="#fc6621" />
         <path
           class="card__line"
           d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650
@@ -414,7 +326,7 @@
           d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650
           300 Q 750 450 800 400 L 800 500 L 0 500"
           stroke="transparent"
-          fill="#FC6621" />
+          fill="#fc6621" />
         <path
           class="card__line"
           d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650
