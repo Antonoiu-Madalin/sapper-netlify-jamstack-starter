@@ -105,7 +105,8 @@
 
   label[for*="4"]:before {
     font-family: "Font Awesome 5 Brands";
-    content: "\f420";
+    /*content: "\f420"; Angular*/ 
+    content: "\f3b8";
   }
 
   label[for*="5"]:before {
@@ -233,14 +234,12 @@
     <input id="tab3" type="radio" name="tabs" />
     <label for="tab3">React</label>
 
-    <input id="tab4" type="radio" name="tabs" />
-    <label for="tab4">Angular</label>
+    <input id="tab4" type="radio" name="tabs" disabled />
+    <label for="tab4">Vanilla</label>
 
     <input id="tab5" type="radio" name="tabs" disabled />
     <label class="disabl" for="tab5">Ember</label>
   
-
-
 
     <section id="content1" class="ReactCards">
       <SvelteCards />
